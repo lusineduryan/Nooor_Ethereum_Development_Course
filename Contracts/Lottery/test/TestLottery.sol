@@ -14,10 +14,10 @@ contract TestLottery {
 
   //beforeEach
 
-  function testItAllowsPlayerEnter() public {
+  /*function testItAllowsPlayerEnter() public {
     Lottery lottery = Lottery(DeployedAddresses.Lottery());
     lottery.enter{value: 0.02 ether}();
     address payable[] memory players = lottery.manager.getPlayers();
     Assert.equal(msg.sender, players[0], 'player did not enter the lottery');
-  }
+  }*/
 }

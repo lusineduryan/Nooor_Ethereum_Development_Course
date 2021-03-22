@@ -70,7 +70,7 @@ contract("LotteryModified", accounts => {
     await lotteryModifiedInstance.enterLottery({
       from: accounts[1],
       value: web3.utils.toWei("1", "ether")
-    });
+    }); 
 
     const initialContractBalance = await lotteryModifiedInstance.getContractBalance();
     console.log(initialContractBalance);
@@ -82,7 +82,5 @@ contract("LotteryModified", accounts => {
     const dif = initialContractBalance - finalContractBalance;
     console.log(dif);
     assert(dif > web3.utils.toWei("1.7", "ether"), "contract didn't get the 10% fee");
-  })
-
-
+  });
 });
